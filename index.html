@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluemica | Campus Utility Hub</title>
+    <link rel="icon" type="image/png" href="bluemicabg.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+        
+        :root {
+            --bluemica-blue: #007BFF;
+            --bluemica-navy: #003366;
+            --bluemica-gold: #FFB84D;
+        }
+
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #f8fafc; }
+
+        .slant-btn {
+            clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+            transition: all 0.3s ease;
+        }
+
+        .slant-btn:hover {
+            clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+            transform: translateY(-2px);
+        }
+
+        .card-shadow {
+            box-shadow: 0 20px 50px -10px rgba(0, 51, 102, 0.1);
+        }
+
+        .ribbon-bg {
+            background: linear-gradient(135deg, var(--bluemica-navy) 0%, var(--bluemica-blue) 100%);
+            clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+        }
+
+        /* Continuous Mobile Slide */
+        @keyframes slideUp {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(-100%); }
+            50% { transform: translateY(-200%); }
+            75% { transform: translateY(-300%); }
+            100% { transform: translateY(0); }
+        }
+
+        .screen-track {
+            animation: slideUp 12s infinite cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        .pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <nav class="flex items-center justify-between px-10 py-6 bg-white/80 backdrop-blur-md fixed w-full z-50 border-b border-slate-100">
+        <div class="flex items-center gap-3 group">
+            <img src="bluemicabg.png" alt="Bluemica Logo" class="h-9 w-auto object-contain transition-transform group-hover:scale-105">
+            <span class="pacifico-regular text-4xl">Bluemica</span>
+        </div>
+        <div class="hidden md:flex gap-10 font-medium text-slate-500">
+            <a href="#" class="hover:text-blue-600 transition-colors">The App</a>
+            <a href="#" class="hover:text-blue-600 transition-colors">Community</a>
+            <a href="#" class="hover:text-blue-600 transition-colors">Safety</a>
+        </div>
+        <button class="slant-btn bg-[#003366] text-white px-8 py-2 font-bold uppercase text-xs tracking-widest">
+            Join Now
+        </button>
+    </nav>
+
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+            
+            <div class="relative z-10">
+                <h1 class="text-6xl md:text-8xl font-bold text-[#003366] leading-[0.85] tracking-tighter mb-8">
+                    Streamlining <br><span class="text-blue-600">Campus life</span><br> FOR YOU.
+                </h1>
+                <p class="text-lg text-slate-500 max-w-md mb-10 leading-relaxed">
+                    The essential utility layer for campus life. Trade items, split auto rides, find your lost items and stay connected with your verified college peers.
+                </p>
+                <div class="flex items-center gap-6">
+                    <button class="bg-[#003366] text-white px-10 py-5 rounded-full font-bold shadow-xl hover:bg-blue-700 transition-all">
+                        Get the App
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative flex justify-center lg:justify-end">
+                <div class="w-72 h-[550px] bg-slate-900 rounded-[3rem] p-3 border-8 border-slate-800 card-shadow overflow-hidden relative">
+                    <div class="screen-track h-full w-full">
+                        <div class="h-full w-full bg-blue-600 p-6 flex flex-col justify-end text-white text-center items-center">
+                            <i class="fas fa-car-side text-4xl mb-4"></i>
+                            <h3 class="font-bold text-xl">Ride Share</h3>
+                            <p class="text-sm opacity-80">Safe travels.</p>
+                        </div>
+                        <div class="h-full w-full bg-[#FFB84D] p-6 flex flex-col justify-end text-[#003366] text-center items-center">
+                            <i class="fas fa-shopping-bag text-4xl mb-4"></i>
+                            <h3 class="font-bold text-xl">Buy & Sell</h3>
+                            <p class="text-sm opacity-80">Campus marketplace.</p>
+                        </div>
+                        <div class="h-full w-full bg-white p-6 flex flex-col justify-end text-[#003366] text-center items-center">
+                            <i class="fas fa-search text-4xl mb-4 text-blue-600"></i>
+                            <h3 class="font-bold text-xl text-blue-600">Found It!</h3>
+                            <p class="text-sm text-slate-400">Recover lost items.</p>
+                        </div>
+                        <div class="h-full w-full bg-[#003366] p-6 flex flex-col justify-end text-white text-center items-center">
+                            <i class="fas fa-users text-4xl mb-4"></i>
+                            <h3 class="font-bold text-xl">Community</h3>
+                            <p class="text-sm opacity-80">Your campus voice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 container mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl card-shadow border-t-4 border-blue-500">
+                <h4 class="text-xl font-bold mb-4">Ride Sharing</h4>
+                <p class="text-slate-500 mb-6">Coordinate weekend trips or daily commutes with fellow students. Split the prices.</p>
+                <a href="#" class="text-blue-600 font-bold flex items-center gap-2">Learn More <i class="fas fa-chevron-right text-xs"></i></a>
+            </div>
+            <div class="bg-white p-8 rounded-3xl card-shadow border-t-4 border-[#FFB84D]">
+                <h4 class="text-xl font-bold mb-4">Buy & Sell</h4>
+                <p class="text-slate-500 mb-6">Trade items smartly. Safe, local, and direct.</p>
+                <a href="#" class="text-blue-600 font-bold flex items-center gap-2">Learn More <i class="fas fa-chevron-right text-xs"></i></a>
+            </div>
+            <div class="bg-white p-8 rounded-3xl card-shadow border-t-4 border-blue-900">
+                <h4 class="text-xl font-bold mb-4">Lost & Found</h4>
+                <p class="text-slate-500 mb-6">Explore lost and found reports. Get your stuff back.</p>
+                <a href="#" class="text-blue-600 font-bold flex items-center gap-2">Learn More <i class="fas fa-chevron-right text-xs"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-20">
+        <div class="ribbon-bg p-16 text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 italic">Ready to own your campus?</h2>
+            <p class="text-blue-100 mb-10 max-w-xl mx-auto">Join the community making your college life more efficient with Bluemica.</p>
+            <div class="flex justify-center gap-4">
+                <!-- <button class="bg-white text-[#003366] px-8 py-3 rounded-full font-bold">App Store</button> -->
+                <button class="bg-blue-400 text-white px-8 py-3 rounded-full font-bold">Play Store</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3 group">
+                    <img src="bluemicabg.png" alt="Bluemica Logo" class="h-7 w-auto object-contain">
+                    <span class="pacifico-regular">Bluemica</span>
+                </div>
+
+                <p class="text-slate-400 text-sm order-3 md:order-2">
+                    © 2026 Bluemica | All rights reserved.
+                </p>
+
+                <div class="flex gap-6 text-sm font-medium text-slate-500 order-2 md:order-3">
+                    <a href="privacy.html" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-blue-600 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
